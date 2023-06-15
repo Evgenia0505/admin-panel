@@ -1,0 +1,218 @@
+@font-face{
+    font-family: "Segoe UI";
+    font-weight: 600;
+    src: url("fonts/SegoeUI.woff") format("woff");
+}
+
+@font-face{
+    font-family: "Segoe UI";
+    font-weight: bold;
+    src: url("fonts/SegoeUI-Bold.woff") format("woff");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    --nav: rgb(247, 247, 247);
+    --body: #ebebeb;
+    --text:#767575;
+    --shadow:rgba(128, 128, 128, 0.422);
+    --hr:#76757540;
+    --pink:#c30e4e;
+    --black:black;
+    --white: white; 
+}
+
+body{
+    font-family: "Segoe UI", sans-serif;
+    margin: 0 auto;
+    max-width: 2000px;
+    background-color: var(--body);
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px; 
+    height: 100vh;    
+    background-color: var(--nav);
+    box-shadow: 3px 0 3px 1px var(--shadow);
+}
+
+nav p{
+    padding: 25px 33px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid var(--hr); 
+}
+
+nav ul{
+    list-style: none;
+    margin: 20px 17px;
+}
+
+nav a{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    padding: 15px 20px;
+    margin-bottom: 5px;
+}
+
+nav img{
+    width: 18px;
+}
+
+nav a:hover, .active{
+    color: var(--white);
+    background-color: var(--pink);
+    box-shadow: 1px 1px 2px 1px var(--shadow);
+}
+
+#check-menu, .btn-menu{
+    display: none;
+}
+
+li a span{
+    white-space: nowrap;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 0 220px;
+    padding: 20px 30px 35px 40px;
+    border-top: 2px solid var(--hr); 
+}
+
+footer ul{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+}
+
+footer ul a{
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--black);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+footer ul a:hover{
+    text-decoration: underline;
+}
+
+footer span{
+    font-size: 14px;
+    color: var(--text);
+    padding-top: 6px;
+}
+
+
+@media screen and (max-width: 800px){
+    nav{
+        max-width: 0px;
+        overflow: hidden;
+        transition: max-width 0.7s;
+        box-shadow: 0 0 0 0;
+        z-index: 2;
+    }
+
+    nav a{
+        opacity: 1;
+        animation: appear 2.7s;
+    }
+    
+    @keyframes appear{
+        0%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 0.1;
+        }
+        100%{
+            opacity: 1;
+            }
+        }
+
+    #check-menu:checked ~ nav{
+        display: block;
+        max-width: 200px;
+        transition: max-width 1s;
+        box-shadow: 3px 0px 3px 1px var(--shadow);
+    }
+
+    nav p{
+        padding: 25px 0px 20px 75px;
+    }
+
+    .btn-menu{
+        display: flex;
+        align-items: center;
+        height: 23px;
+        position: absolute;
+        top: 24px;
+        left: 30px;
+        cursor: pointer;
+        z-index: 3;
+    }
+    
+    label > .fa-xmark{
+        display: none;
+    }
+
+    #check-menu:checked ~ .btn-menu > .fa-xmark{
+        display: block;
+        position: fixed;
+    }
+
+    #check-menu:checked ~ .btn-menu > .fa-bars{
+        display: none;
+    }
+    
+    footer{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 650px){
+    footer ul{
+        gap: 20px;
+    }
+    footer ul a{
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    footer ul{
+        gap: 10px;
+    }
+    footer ul a, footer span{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 390px){
+    footer ul{
+        gap: 5px;
+    }
+    footer ul a{
+        font-size: 10px;
+        padding: 0px;
+    }
+    footer span{
+        font-size: 10px;
+    }
+}

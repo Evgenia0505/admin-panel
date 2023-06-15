@@ -1,0 +1,315 @@
+html{
+    --green:#4e9213;
+    --orange:#dfa220;
+    --blue:#22488f;
+}
+
+.dashboard{
+    content: url(images/dashboard_white.svg);
+}
+
+main{
+    margin: 0 30px 0 250px;
+}
+
+main h1{
+    font-size: 20px;
+    padding: 25px 0px 50px;
+}
+
+/* первый ряд состоит из 4 иформационных блоков */
+.info-block{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    color: var(--text);
+}
+
+.info, .graphic, .list{
+    background-color: var(--white);
+    padding: 0px 15px 15px 15px;
+    box-shadow: 2px 2px 2px 2px var(--shadow);
+}
+
+.info-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--hr); 
+    line-height: 1rem;
+    margin-bottom: 15px;
+}
+
+.green{
+    background-color: var(--green);
+}
+.orange{
+    background-color: var(--orange);
+}
+.blue{
+    background-color: var(--blue);
+}
+.pink{
+    background-color: var(--pink);
+}
+.green, .orange, .blue, .pink{
+    padding: 14px 15px;
+    transform: translateY(-15px);
+    box-shadow: 1px 1px 2px 1px var(--shadow);
+}
+
+.info-main div:last-child{
+    text-align: right;
+}
+
+.info-main div p:first-child{
+    font-size: 11px;
+}
+
+.info-main div p:last-child{
+    font-size: 22px;
+    color: var(--black);
+}
+
+.info-footer img, .graphic-footer img{
+    width: 11px;
+}
+
+.info-footer, .graphic-footer{
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    font-size: 11px;
+}
+
+/* второй ряд состоит из 3 блоков с графиками */
+.graphic-block{
+    display: flex;
+    gap: 15px;
+    margin: 60px 0px;
+    color: var(--text);
+}
+
+.graphic-img img{
+    width: 100%;
+}
+
+.graphic-main{
+    line-height: 1.1rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--hr);
+    margin-bottom: 15px;
+}
+
+.graphic-main p:first-child{
+    color: var(--black);
+}
+
+.graphic-main p:last-child{
+    font-size: 14px;
+}
+
+/* третий ряд состоит из 2 блоков со списками */
+.list-block{
+    display: flex;
+    gap: 15px;
+    margin: 60px 0px;
+    font-size: 14px;
+    color: var(--text);
+}
+
+.list{
+    width: 50%;
+}
+
+.list-header, .list-header ul a, .employee-header{
+    color: var(--white);
+}
+
+.list-header{
+    display: flex;
+    align-items: baseline;
+    gap: 25px;
+}
+
+.list-header ul{
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    list-style-type: none;
+}
+
+.list-header ul a{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.list-header ul a:hover{
+    background-color: rgb(237, 184, 86);
+}
+
+.list-header ul a img{
+    width: 15px;
+}
+
+.list-header li:last-child img{
+    width: 22px;
+}
+
+.list-task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 5px;
+    border-bottom: 2px solid var(--hr); 
+}
+
+.list-task input[type=checkbox]{
+    display: none;  
+}
+
+.list-task label{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.label::before{
+    content: "";
+    background-color: rgb(237, 237, 237);
+    border: 1px solid var(--shadow);
+    min-width: 11px;
+    min-height: 11px;
+}
+
+input[type=checkbox]:checked + .label::before{
+    background-image: url(images/check.png);
+    background-size: 100%;
+}
+
+.list-task .task-img{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.list-task .task-img img{
+    width: 18px;
+}
+
+.list-task .task-img img:hover{
+    cursor: pointer;
+}
+
+
+.employee-header p:first-child{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.employee-main{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.employee-person{
+    display: grid;
+    grid-template-columns: 50px 1.5fr 1fr 1fr;
+    border-bottom: 2px solid var(--hr); 
+    padding: 10px;
+    gap: 5px;
+}
+
+.employee-person:first-child{
+    color: #2ba079;
+}
+
+.employee-person:last-child, .list-task:last-child{
+    border: none;
+}
+
+
+@media screen and (min-width: 1001px) and (max-width: 1150px){
+    .info-main div p:last-child{
+        font-size: 19px;
+    }
+    .list-header{
+        gap: 10px;
+    }
+    .list-header ul{
+        gap: 0px;
+    }
+    .list-header ul a{
+        padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .info-block {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 60px;
+    }
+    .graphic-main{
+        font-size: 17px;
+    }
+    .list-block{
+        flex-direction: column;
+        gap: 60px;
+    }
+    .list{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    main {
+        margin-left: 30px;
+    }
+    main h1 {
+        padding-left: 50px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .graphic-block {
+        flex-direction: column;
+        gap: 60px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .info-block{
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+    }
+    .list-header{
+        font-size: 12px;
+        gap: 10px;
+    }
+    .list-header ul{
+        gap: 0px;
+    }
+    .list-header ul a{
+        padding: 10px 5px;
+    }
+    .list-task .task-img{
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .list-header ul{
+        gap: 10px;
+    }
+    .list-header ul a {
+        flex-direction: column;
+    }
+    .employee-person{
+        grid-template-columns: 25px 1.5fr 1fr 1fr;
+    }
+}

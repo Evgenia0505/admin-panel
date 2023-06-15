@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+
+    <section>
+        <input id="check-menu" type="checkbox">
+        <label class="btn-menu" for="check-menu">
+            <i class="fa-sharp fa-solid fa-bars fa-xl"></i>
+            <i class="fa-sharp fa-solid fa-xmark fa-xl" ></i>
+        </label>
+
+        <nav>
+            <p>Company</p>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img src="images/dashboard_gray.svg" class="dashboard" alt="">
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a class="active" href="account.html">
+                        <img src="images/account_gray.svg" class="account" alt="">
+                        <span>User Profile</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/map_gray.svg" alt="">
+                        Maps
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/notify_gray.svg" alt="">
+                        Notifications
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/support_gray.svg" alt="">
+                        Support
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <main>
+        <h1>User Profile</h1>
+        <section class="profile-block">
+
+            <div class="profile">
+                <div class="profile-header pink">
+                    <p>Edit Profile</p>
+                    <p>Complete your profile</p>
+                </div>
+
+                <form action="">
+                    <div class="profile-main">
+
+                        <div class="row1">
+                            <label for="company">
+                                <p>Company</p>
+                                <input type="text" id="company">
+                            </label>
+                            <label for="username">
+                                <p>Username</p>
+                                <input type="text" id="username">
+                            </label>
+                            <label for="email">
+                                <p>Email address</p>
+                                <input type="email" id="email">
+                            </label>
+                        </div>
+
+                        <div class="row2">
+                            <label for="firstName">
+                                <p>First name</p>
+                                <input type="text" id="firstName">
+                            </label>
+                            <label for="lastName">
+                                <p>Last name</p>
+                                <input type="text" id="lastName">
+                            </label>
+                        </div>
+
+                        <div class="row3">
+                            <label for="address">
+                                <p>Address</p>
+                                <input type="text" id="address">
+                            </label>
+                        </div>
+
+                        <div class="row4">
+                            <label for="city">
+                                <p>City</p>
+                                <input type="text" id="city">
+                            </label>
+                            <label for="country">
+                                <p>Country</p>
+                                <input type="text" id="country">
+                            </label>
+                            <label for="postal">
+                                <p>Postal code</p>
+                                <input type="number" id="postal">
+                            </label>
+                        </div>
+
+                        <div class="row5">
+                            <label for="about">
+                                <p>About me</p>
+                                <textarea name="" id="about"></textarea>
+                            </label>
+                        </div>
+
+                        <div class="btn">
+                            <input class="pink" type="submit" value="update profile">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="photo">
+
+                <div class="img"></div>
+                <p>ceo / co-founder</p>
+                <p>Alec Thompson</p>
+                <p>
+                    Don't be scared of the truth because we need
+                    to restart the human foundation in truth And I
+                    love you like Kanye loves Kanye I love Rick
+                    Owens' bed design but the back is...
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Licenses</a></li>
+        </ul>
+        <span>2019 - made with love</span>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/0b2d358bdd.js" crossorigin="anonymous"></script>
+</body>
+</html>

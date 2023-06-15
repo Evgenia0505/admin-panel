@@ -1,0 +1,211 @@
+.account{
+    content: url(images/account_white.svg);
+}
+
+main{
+    margin: 0px 30px 0px 250px;
+}
+
+main h1{
+    font-size: 20px;
+    padding: 25px 0px 50px 0px;
+}
+
+.profile-block{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.profile{
+    width: 67%;
+    padding: 0px 20px;
+    background-color: var(--white);
+    box-shadow: 2px 2px 2px 2px var(--shadow);
+}
+
+.pink{
+    background-color: var(--pink);
+    box-shadow: 1px 1px 2px 1px var(--shadow);
+}
+
+.profile-header{
+    padding: 17px;
+    transform: translateY(-20px);
+    color: var(--white);
+}
+
+.profile-header p:first-child{
+    margin-bottom: 15px; 
+    font-size: 16px;
+}
+
+.profile-header p:last-child{
+    font-size: 14px
+}
+
+.profile-main{
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    font-size: 12px;
+    color: var(--text);
+}
+
+.row1, .row4{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.row2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+input{
+    margin-top: 5px;
+}
+
+/* убрать стрелочки у Postal code */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; 
+}
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+input, textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--hr); 
+    outline: none;
+}
+
+textarea{
+    resize: none;
+    height: 70%;
+}
+
+.btn{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+input[type=submit]{
+    width: auto;
+    padding: 10px 42px;
+    font-size: 12px;
+    color: var(--white);
+    text-transform: uppercase;
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.photo{
+    position: relative;
+    width: 33%;
+    height: min-content;
+    text-align: center;
+    padding: 80px 20px 20px 20px;
+    font-size: 16px;
+    background-color: var(--white);
+    color: var(--text);
+    box-shadow: 2px 2px 2px 2px var(--shadow);
+}
+
+.img{
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    width: 110px;
+    height: 110px;
+    transform: translateX(-50%);
+    background-image: url(images/cat.png);
+    background-size: 130%;
+    background-position: 12% 30%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px 4px var(--shadow);
+    animation: cat 2.7s;
+}
+
+@keyframes cat{
+    0%{
+        transform: translateX(-55px) rotate(0deg);
+        }
+    20%{
+        transform: translateX(-55px) rotate(-25deg);
+    }
+    45%{
+        transform: translateX(-55px) rotate(25deg);
+    } 
+    65%{
+        transform: translateX(-55px) rotate(0deg);
+    }   
+    100%{ 
+        transform: translateX(-55px) rotateY(360deg); 
+        }
+    }
+
+.photo p:nth-child(2){
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.photo p:nth-child(3){
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: var(--black);
+}
+
+
+@media screen and (max-width: 1000px){
+    .profile-block{
+        flex-direction: column-reverse;
+        gap: 60px;
+    }
+    .photo, .profile{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    main{
+        margin: 0px 30px;
+    }
+    main h1{
+        padding-left: 50px;
+    }
+    .btn-menu{
+        left: 30px;
+    }
+}
+
+@media screen and (max-width: 370px){
+    main{
+        margin: 0 25px;
+    }
+    main h1{
+        padding-left: 45px;
+    }
+    .profile-main{
+        font-size: 10px;
+    }
+    .row1, .row4{
+        gap: 15px;
+    }
+    .btn-menu{
+        left: 25px;
+    }
+    footer{
+        padding: 20px 25px 35px 35px;
+    }
+}

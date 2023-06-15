@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <!-- боковое меню -->
+    <section>
+        <input id="check-menu" type="checkbox">
+        <label class="btn-menu" for="check-menu">
+            <i class="fa-sharp fa-solid fa-bars fa-xl"></i>
+            <i class="fa-sharp fa-solid fa-xmark fa-xl" ></i>
+        </label>
+
+        <nav>
+            <p>Company</p>
+            <ul>
+                <li>
+                    <a class="active" href="index.html">
+                        <img src="images/dashboard_gray.svg" class="dashboard" alt="">
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="account.html">
+                        <img src="images/account_gray.svg" class="account" alt="">
+                        <span>User Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/map_gray.svg" alt="">
+                        Maps
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/notify_gray.svg" alt="">
+                        Notifications
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/support_gray.svg" alt="">
+                        Support
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- основной контент страницы -->
+    <main>
+        <h1>Dashboard</h1>
+
+        <!-- первый ряд состоит из 4 иформационных блоков -->
+        <div class="info-block">
+
+            <!-- 1 блок - используемое пространство -->
+            <div class="info">
+
+                <div class="info-main">
+                    <div class="green">
+                        <img src="images/data_white.svg" alt="data">
+                    </div>
+                    <div>
+                        <p>Used Space</p>
+                        <p>49/50GB</p>
+                    </div>
+                </div>
+
+                <div class="info-footer">
+                    <img src="images/alert.png" alt="">
+                    <p>Get more space...</p>
+                </div>
+
+            </div>
+
+            <!-- 2 блок -  денежные поступления -->
+            <div class="info">
+
+                <div class="info-main">
+                    <div class="orange">
+                        <img src="images/shop_white.svg" alt="shop">
+                    </div>
+                    <div>
+                        <p>Revenue</p>
+                        <p>$ 34,245</p>
+                    </div>
+                </div>
+
+                <div class="info-footer">
+                    <img src="images/calendar.png" alt="">
+                    <p>Last 24 Hours</p>
+                </div>
+
+            </div>
+
+            <!-- 3 блок - решенные проблемы -->
+            <div class="info">
+
+                <div class="info-main">
+                    <div class="blue">
+                        <img src="images/tag_white.svg" alt="tag">
+                    </div>
+                    <div>
+                        <p>Fixed Issues</p>
+                        <p>75</p>
+                    </div>
+                </div>
+
+                <div class="info-footer">
+                    <img src="images/down.png" alt="">
+                    <p>Tracked from Github</p>
+                </div>
+
+            </div>
+
+            <!-- 4 блок - количество подписчиков -->
+            <div class="info">
+
+                <div class="info-main">
+                    <div class="pink">
+                        <img src="images/paperplane_white.svg" alt="paperplane">
+                    </div>
+                    <div>
+                        <p>Followers</p>
+                        <p>+ 245</p>
+                    </div>
+                </div>
+
+                <div class="info-footer">
+                    <img src="images/time.png" alt="">
+                    <p>Just updated</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- второй ряд состоит из 3 блоков с графиками -->
+        <div class="graphic-block">
+
+            <!-- 1 блок- дневные продажи -->
+            <div class="graphic">
+
+                <div class="graphic-img green">
+                    <img src="images/graphics.svg" alt="graphic">
+                </div>
+
+                <div class="graphic-main">
+                    <p>Daily Sales</p>
+                    <p>55% increase in today sales</p>
+                </div>
+
+                <div class="graphic-footer">
+                    <img src="images/time.png" alt="">
+                    <p>updated 4 minutes ago</p>
+                </div>
+
+            </div>
+
+            <!-- 2 блок - email-подписки -->
+            <div class="graphic">
+
+                <div class="graphic-img orange">
+                    <img src="images/graphics.svg" alt="graphic">
+                </div>
+                <div class="graphic-main">
+                    <p>Email Subscriptions</p>
+                    <p>Last Campaign Performance</p>
+                </div>
+                <div class="graphic-footer">
+                    <img src="images/time.png" alt="">
+                    <p>campaign sent 2 days ago</p>
+                </div>
+
+            </div>
+
+            <!-- 3 блок - законченные задачи -->
+            <div class="graphic">
+
+                <div class="graphic-img blue">
+                    <img src="images/graphics.svg" alt="graphic">
+                </div>
+                <div class="graphic-main">
+                    <p>Complated Tasks</p>
+                    <p>Last Campaign Performance</p>
+                </div>
+                <div class="graphic-footer">
+                    <img src="images/time.png" alt="">
+                    <p>compaign event 2 days ago</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- третий ряд состоит из 2 блоков со списками -->
+        <div class="list-block">
+
+            <!-- 1 блок - список задач -->
+            <div class="list">
+
+                <div class="list-header orange">
+                    <span>Tasks:</span>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="images/bug.svg" alt="">
+                                Bugs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/web.svg" alt="">
+                                Website
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/cloud.svg" alt="">
+                                Server
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="list-main">
+
+                    <div class="list-task">
+                        <input type="checkbox" name="" id="choice1" checked>
+                        <label class="label" for="choice1">
+                            <p>
+                                Sign contract for "What are conference organizers afraid of?"
+                            </p>
+                        </label>
+                        <div class="task-img">
+                            <img src="images/edit.png" alt="">
+                            <img src="images/remove.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="list-task">
+                        <input type="checkbox" name="" id="choice2">
+                        <label class="label" for="choice2">
+                            <p>
+                                Lines From Great Russian Literature? Or E-mails From My Boss?
+                            </p>
+                        </label>
+                        <div class="task-img">
+                            <img src="images/edit.png" alt="">
+                            <img src="images/remove.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="list-task">
+                        <input type="checkbox" name="" id="choice3">
+                        <label class="label" for="choice3">
+                            <p>
+                                Sign contract for "What are conference organizers afraid of?"
+                            </p>
+                        </label>
+                        <div class="task-img">
+                            <img src="images/edit.png" alt="">
+                            <img src="images/remove.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="list-task">
+                        <input type="checkbox" name="" id="choice4" checked>
+                        <label class="label" for="choice4">
+                            <p>
+                                Sign contract for "What are conference organizers afraid of?"
+                            </p>
+                        </label>
+                        <div class="task-img">
+                            <img src="images/edit.png" alt="">
+                            <img src="images/remove.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 2 блок - список работников -->
+            <div class="list">
+
+                <div class="employee-header blue">
+                    <p>Employees Stats</p>
+                    <p>New employees on 19th September, 2019</p>
+                </div>
+
+                <div class="employee-main">
+
+                    <div class="employee-person">
+                        <span>ID</span>
+                        <span>Name</span>
+                        <span>Salary</span>
+                        <span>Country</span>
+                    </div>
+                    <div class="employee-person">
+                        <span>1</span>
+                        <span>Dakota Rice</span>
+                        <span>$36,738</span>
+                        <span>Niger</span>
+                    </div>
+                    <div class="employee-person">
+                        <span>1</span>
+                        <span>Dakota Rice</span>
+                        <span>$36,738</span>
+                        <span>Niger</span>
+                    </div>
+                    <div class="employee-person">
+                        <span>1</span>
+                        <span>Dakota Rice</span>
+                        <span>$36,738</span>
+                        <span>Niger</span>
+                    </div>
+                    <div class="employee-person">
+                        <span>1</span>
+                        <span>Dakota Rice</span>
+                        <span>$36,738</span>
+                        <span>Niger</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Licenses</a></li>
+        </ul>
+        <span>2019 - made with love</span>
+    </footer>
+
+    <!-- иконки -->
+    <script src="https://kit.fontawesome.com/0b2d358bdd.js" crossorigin="anonymous"></script>
+</body>
+</html>
